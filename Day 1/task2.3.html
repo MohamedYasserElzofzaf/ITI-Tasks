@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var name = prompt("Please enter your name ");
+        var phone = prompt(
+            "Please enter your phone number & make sure it's number and length is 8 "
+        );
+        var mobile = prompt(
+            "Please enter your mobile number & make sure it's number and length is 11 "
+        );
+        var email = prompt("Please enter your email ");
+        var color = prompt(
+            "Please choose what color you want to display with [1]Red [2]Green [3]Blue "
+        );
+
+        document.write("Welcome dear guest ", name, "<br>");
+        if (isNaN(phone) && phone.length != 8) {
+            document.write("Your telephone number is Not valid");
+        } else {
+            document.write("Your telephone number is ", phone, "<br>");
+        }
+        if (isNaN(phone) && phone.length != 11) {
+            document.write("Your mobile number is Not valid");
+        } else {
+            document.write("Your mobile number is  ", mobile, "<br>");
+        }
+        document.write("Your email address is  ", email, "<br>");
+    </script>
+</body>
+
+</html>

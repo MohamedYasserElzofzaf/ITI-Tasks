@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var count = 0;
+        var word = prompt("Please enter the string you want to calculate in it ");
+        var chars = word.split("");
+        for (var i = 0; i < chars.length; i++) {
+            if (chars[i] === "e") {
+                count++;
+            }
+        }
+        document.write('The number of the "e" in the string is ', count);
+    </script>
+</body>
+
+</html>

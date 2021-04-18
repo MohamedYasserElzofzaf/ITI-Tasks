@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = prompt(
+            "Please enter the string you want to check if it's palindrome or not !!! "
+        );
+        var check = confirm("Do you want it to be case sensitive ?!");
+        if (check === true) {
+            var reversed = str.split("").reverse().join("");
+            if (str === reversed) {
+                document.write("This is a palindrome");
+            } else {
+                document.write("This is not a palindrome");
+            }
+        } else {
+            var reversed = str.split("").reverse().join("");
+            if (str === reversed) {
+                document.write("This is a palindrome");
+            } else {
+                document.write("This is not a palindrome");
+            }
+        }
+    </script>
+</body>
+
+</html>
