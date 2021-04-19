@@ -29,7 +29,7 @@
         );
 
         document.write("Welcome dear guest ", name, "<br>");
-        if (isNaN(phone) && phone.length != 8) {
+        if (isNaN(phone) && phone / 8 != 1) {
             document.write("Your telephone number is Not valid");
         } else {
             document.write("Your telephone number is ", phone, "<br>");
