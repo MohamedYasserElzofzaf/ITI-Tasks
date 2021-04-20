@@ -32,7 +32,7 @@
             }
         } else {
             var reversed = str.split("").reverse().join("");
-            if (str === reversed) {
+            if (str.toLowerCase() === reversed.toLowerCase()) {
                 document.write("This is a palindrome");
             } else {
                 document.write("This is not a palindrome");
