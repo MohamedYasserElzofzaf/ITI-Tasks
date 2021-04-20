@@ -15,13 +15,22 @@
 
 <body>
     <script>
-        var x = prompt("Please enter the first number");
-        var y = prompt("Please enter the second number");
-        var z = parseInt(x) + parseInt(y);
-        if (x == 0 || y == 0 || z >= 100) {
+        var total = 0;
+        var input = prompt("Please enter how many number you want to calculate");
+        for (var i = 0; i < input; i++) {
+            var x = prompt("Please enter the numbers");
+            var y = parseInt(x);
+            if (y === 0) {
+                document.close();
+                break;
+            } else {
+                total += y;
+            }
+        }
+        if (total >= 100 || total == 0) {
             document.close();
         } else {
-            document.write("The sum of the numbers is : ", z);
+            document.write("The sum of the numbers is : ", total);
         }
     </script>
 </body>
