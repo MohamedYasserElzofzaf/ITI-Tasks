@@ -12,6 +12,31 @@
     <title>Document</title>
 </head>
 
-<body></body>
+<body>
+    <script>
+        var arr = [];
+        for (var i = 0; i < 5; i++) {
+            var x = prompt("Please enter the number");
+            var y = parseInt(x);
+            arr[i] = y;
+        }
+        document.write("You have entered the values of ", arr, "<br>");
+        var ascendingSort = arr.sort(function(a, b) {
+            return a - b;
+        });
+        document.write(
+            "Your values after being sorted ascending ",
+            ascendingSort,
+            "<br>"
+        );
+        var descendingSort = ascendingSort.reverse();
+
+        document.write(
+            "Your values after being sorted descending ",
+            descendingSort,
+            "<br>"
+        );
+    </script>
+</body>
 
 </html>
