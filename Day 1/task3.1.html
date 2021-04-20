@@ -13,6 +13,34 @@
     <title>Document</title>
 </head>
 
-<body></body>
+<body>
+    <script>
+        var arr = [];
+        var sum = 0;
+        var mul = 1;
+        var div = 1;
+        for (var i = 0; i < 3; i++) {
+            var x = prompt("Please enter the number");
+            var y = parseInt(x);
+            arr[i] = y;
+            sum += y;
+            mul *= y;
+            div = y / div;
+        }
+        var sumNum = arr.join(" + ");
+        var mulNum = arr.join(" * ");
+        var divNum = arr.join(" / ");
+
+        document.write("Sum of the 3 values ", sumNum, " = ", sum, "<br>");
+        document.write(
+            "Multiplication of the 3 values  ",
+            mulNum,
+            " = ",
+            mul,
+            "<br>"
+        );
+        document.write("Division of the 3 values ", divNum, " = ", div, "<br>");
+    </script>
+</body>
 
 </html>
