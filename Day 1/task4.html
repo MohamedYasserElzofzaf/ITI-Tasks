@@ -1,0 +1,43 @@
+<!-- 
+    Write a script that ask the user to
+    * Enter the value of a circle’s radius in order to calculate its area
+    * Enter another value to calculate its square root and alert the result
+    * Enter an angle to calculate its cos value then display the output
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var a = Math.PI;
+        var i = "Type Your Value Here";
+        var radius = prompt("What is the value of your circle radius", i, "<br>");
+        var areaC = Math.PI * radius * radius;
+        alert("Total area of circle is " + areaC);
+        // ------------------------------------------
+        var n = prompt(
+            "What is the value you want to calculate its square root",
+            i,
+            "<br>"
+        );
+        var sqr = Math.sqrt(n);
+        alert("Square root of " + n + " is " + sqr);
+        // ------------------------------------------
+        var c = prompt(
+            "What is the angle you want to calculate its cos value ",
+            i,
+            "<br>"
+        );
+        var cosC = Math.cos(c);
+        alert("Cos " + c + " is " + cosC);
+    </script>
+</body>
+
+</html>
