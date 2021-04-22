@@ -19,6 +19,8 @@
     <script>
         var myWindow;
         var flag = 1;
+        var w = window.outerWidth;
+        var h = window.outerHeight;
 
         function openWin() {
             myWindow = window.open("", "myWindow", "width=200, height=100");
@@ -26,14 +28,14 @@
         }
 
         var move = setInterval(function moveWin() {
-            if (myWindow.screenX <= 450 && myWindow.screenY <= 450 && flag == 1) {
+            if (w <= 450 && h <= 450 && flag == 1) {
                 myWindow.moveBy(10, 10);
                 myWindow.focus();
             } else {
                 flag = 0;
                 myWindow.moveBy(-10, -10);
                 myWindow.focus();
-                if (myWindow.screenX <= 10 && myWindow.screenY <= 10 && flag == 0) {
+                if (w <= 10 && h <= 10 && flag == 0) {
                     flag = 1;
                 }
             }
