@@ -1,0 +1,50 @@
+<!-- 
+    A.1.1. Create a parent window that opens a flying child window.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="openWin()">Open ChildWindow</button>
+    <button onclick="moveWin()">Move ChildWindow</button>
+    <button onclick="stopWin()">Freeze ChildWindow</button>
+
+    <script>
+        var myWindow;
+        var flag = 1;
+
+        function openWin() {
+            myWindow = window.open("", "myWindow", "width=200, height=100");
+            myWindow.document.write("Catch Me If You Can !!!");
+        }
+
+        var move = setInterval(function moveWin() {
+            if (myWindow.screenX <= 450 && myWindow.screenY <= 450 && flag == 1) {
+                myWindow.moveBy(10, 10);
+                myWindow.focus();
+            } else {
+                flag = 0;
+                myWindow.moveBy(-10, -10);
+                myWindow.focus();
+                if (myWindow.screenX <= 10 && myWindow.screenY <= 10 && flag == 0) {
+                    flag = 1;
+                }
+            }
+        }, 200);
+
+        function stopWin() {
+            myWindow.focus();
+            myWindow.clearInterval(move);
+            // window.blur();
+        }
+    </script>
+</body>
+
+</html>
