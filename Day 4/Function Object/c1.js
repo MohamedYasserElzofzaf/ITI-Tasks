@@ -3,8 +3,6 @@
 
 function fun() {
     var sum = 0;
-    // var myError = new Error("Number of parameters less than 2");
-    // var myError1 = new Error("Number of parameters exceeds 2");
     if (arguments.length < 2) {
         throw "Number of parameters less than 2";
     }
