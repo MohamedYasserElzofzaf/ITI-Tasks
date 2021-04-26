@@ -22,7 +22,7 @@ function saveInfo() {
     date.setMonth(date.getMonth() + 2);
     var name = document.getElementById("name").value;
     var age = document.getElementById("age").value;
-    // var male = document.getElementById("male").value;
+    //var male = document.getElementById("male").value;
     // var female = document.getElementById("female").value;
     // var favcolor = document.getElementById("favcolor").value;
 
@@ -41,6 +41,16 @@ function getcookie() {
         ].split("=")[1];
     }
     return assoiativeCookie;
+}
+
+function displayGreetings() {
+    var cookie = getcookie();
+    var h1Elem = document.createElement("h1");
+    document.body.appendChild(h1Elem);
+    var name = cookie["usernamecookie"];
+
+    var txt = "Welcome " + name;
+    h1Elem.appendChild(document.createTextNode(txt));
 }
 
 // function displayInfo() {
