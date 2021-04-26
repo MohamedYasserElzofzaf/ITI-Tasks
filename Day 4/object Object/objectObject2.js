@@ -4,3 +4,5 @@
 //  Implement two methods for calculating its area and perimeter.
 //  Implement displayInfo() function to display a message declaring the width, height, area
 // and perimeter of the created object.
+//  perimeter of a Rectangle	P= 2(l + b)
+// Area of a Rectangle	A = l × b
