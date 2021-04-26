@@ -6,3 +6,29 @@
 // and perimeter of the created object.
 //  perimeter of a Rectangle	P= 2(l + b)
 // Area of a Rectangle	A = l × b
+
+function rectangle(w, h) {
+    return {
+        recWidth: w,
+        recHeight: h,
+        recArea: function() {
+            var area = this.recWidth * this.recHeight;
+            return area;
+        },
+        recPerimeter: function() {
+            var perimeter = this.recWidth + this.recHeight;
+            return perimeter * 2;
+        },
+    };
+}
+var rec = rectangle(5, 7);
+console.log(
+    "The width is : " +
+    rec.recWidth +
+    " ,The height is : " +
+    rec.recHeight +
+    " ,The Area is : " +
+    rec.recArea() +
+    " , The perimeter is : " +
+    rec.recPerimeter()
+);
