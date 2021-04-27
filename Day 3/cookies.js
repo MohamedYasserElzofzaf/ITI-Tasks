@@ -24,7 +24,7 @@ function saveInfo() {
     var age = document.getElementById("age").value;
     //var male = document.getElementById("male").value;
     // var female = document.getElementById("female").value;
-    // var favcolor = document.getElementById("favcolor").value;
+    var favcolor = document.getElementById("favcolor").value;
 
     document.cookie = "usernamecookie=" + name + ";expires=" + date;
     document.cookie = "useragecookie= " + age + ";expires=" + date;
