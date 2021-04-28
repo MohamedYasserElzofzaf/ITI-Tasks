@@ -1,3 +1,8 @@
+var person = function(nm, id) {
+    this.name = nm;
+    this.ID = id;
+};
+
 var Employee = function(nm, sal, dept, id, ybrn) {
     // overloading
     this.empName = nm ? nm : "Yasser";
@@ -30,3 +35,10 @@ var student = function(nm, id, schlnm) {
     this.stdID = id;
     this.schoolName = schlnm;
 };
+
+// inheritance
+// pseudo classical
+Employee.prototype = new person();
+
+// inherit only the prototype
+Employee.prototype = person.prototype;
