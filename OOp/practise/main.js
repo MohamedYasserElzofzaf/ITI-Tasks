@@ -12,8 +12,21 @@ var Employee = function(nm, sal, dept, id, ybrn) {
     this.getYearBorn = function() {
         return yearborn;
     };
-    this.setYearBorn = function() {
-        if (typeof val !== "string") throw "improper string format";
-        yearborn = val.toString();
-    };
+    // this.setYearBorn = function() {
+    //     if (typeof val !== "string") throw "improper string format";
+    //     yearborn = val.toString();
+    // };
+
+    // Private method{{{
+    function welcoming() {
+        alert("Welcome " + nm);
+    }
+    welcoming();
+};
+
+// inheritance
+var student = function(nm, id, schlnm) {
+    this.stdName = nm;
+    this.stdID = id;
+    this.schoolName = schlnm;
 };
