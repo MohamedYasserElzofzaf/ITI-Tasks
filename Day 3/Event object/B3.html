@@ -8,6 +8,13 @@
     <title>Document</title>
 </head>
 
-<body></body>
+<body>
+    <form onsubmit="if(!subCheck()) return false;">
+        <input type="text" name="txtnm" id="txt1" placeholder="Enter your name" /><br />
+        <input type="submit" value="Submit" onsubmit="document.forms[0].submit()" />
+    </form>
+
+    <script src="B3.js"></script>
+</body>
 
 </html>
