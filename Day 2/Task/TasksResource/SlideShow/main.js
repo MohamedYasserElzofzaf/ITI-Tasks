@@ -15,6 +15,7 @@ function previous() {
 }
 
 function SlideShow() {
+    stop();
     timerID = setTimeout(SlideShow, 2000);
     if (i > 6) i = 1;
     document.images[0].src = i + ".jpg";

@@ -27,19 +27,21 @@
             myWindow.document.write("Catch Me If You Can !!!");
         }
 
-        var move = setInterval(function moveWin() {
-            if (w <= 450 && h <= 450 && flag == 1) {
-                myWindow.moveBy(10, 10);
-                myWindow.focus();
-            } else {
-                flag = 0;
-                myWindow.moveBy(-10, -10);
-                myWindow.focus();
-                if (w <= 10 && h <= 10 && flag == 0) {
-                    flag = 1;
+        function moveWin() {
+            var move = setInterval(() => {
+                if (w <= 450 && h <= 450 && flag == 1) {
+                    myWindow.moveBy(10, 10);
+                    myWindow.focus();
+                } else {
+                    flag = 0;
+                    myWindow.moveBy(-10, -10);
+                    myWindow.focus();
+                    if (w <= 10 && h <= 10 && flag == 0) {
+                        flag = 1;
+                    }
                 }
-            }
-        }, 200);
+            }, 50);
+        }
 
         function stopWin() {
             myWindow.focus();

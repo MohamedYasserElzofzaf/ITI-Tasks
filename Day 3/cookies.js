@@ -26,7 +26,7 @@ function saveInfo() {
     // var female = document.getElementById("female").value;
     var favcolor = document.getElementById("favcolor").value;
 
-    document.cookie = "usernamecookie=" + name + ";expires=" + date;
+    document.cookie = "usernamecookie=" + name;
     document.cookie = "useragecookie= " + age + ";expires=" + date;
     // document.cookie = "UserGenderCookie" +  + ";expires=" + date;
     // document.cookie;
@@ -44,10 +44,11 @@ function getcookie() {
 }
 
 function displayGreetings() {
+    document.write(document.cookie["usernamecookie"]);
     var cookie = getcookie();
     var h1Elem = document.createElement("h1");
     document.body.appendChild(h1Elem);
-    var name = cookie["usernamecookie"];
+    // var name = document.cookie["usernamecookie"];
 
     var txt = "Welcome " + name;
     h1Elem.appendChild(document.createTextNode(txt));

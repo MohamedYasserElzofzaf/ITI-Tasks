@@ -1,21 +1,29 @@
 // A.1.2. Write a script that shows a “typing message” appearing in a new child window.
 // The new window should close after few seconds of displaying your message.
 
-var myWindow = window.open("", "myWindow", "width=200, height=200");
-
-var button = document.createElement("button");
-button.innerHTML = "Magic";
-
-const paragh = document.createElement("p");
-paragh.setAttribute("id", "Typing");
+// var button = document.createElement("button");
+// button.innerHTML = "Magic";
+var myWindow;
 var i = 0;
-var txt = "You want to see a magic!!!";
-var speed = 50;
 
-button.addEventListener("click", function typeWriter() {
-    if (i < txt.length) {
-        document.getElementById("Typing").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-});
+function fun() {
+    myWindow = window.open("", "", "width=200, height=200");
+    setInterval(() => {
+        var txt = "You want to see a magic!!!";
+
+        if (i < txt.length) {
+            myWindow.document.write(txt.charAt(i));
+            i++;
+        }
+    }, 50);
+}
+
+// function funy() {
+//     // const paragh = document.createElement("p");
+//     // paragh.setAttribute("id", "Typing");
+//     // var txt = "You want to see a magic!!!";
+//     // if (i < txt.length) {
+//     //     myWindow.document.write(txt.charAt(i));
+//     //     i++;
+//     // }
+// }
