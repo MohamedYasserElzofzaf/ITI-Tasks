@@ -17,21 +17,34 @@
     <script>
         var total = 0;
         // var input = prompt("Please enter how many number you want to calculate");
-        var x = prompt("Please enter the numbers");
-        for (var i = 0; i < input; i++) {
-            var y = parseInt(x);
-            if (y === 0) {
-                document.close();
-                break;
+        do {
+            var x = prompt("Please enter the numbers");
+            if (isNaN(x)) {
+                alert("Your input is not a number!! Shame on you !");
             } else {
-                total += y;
+                total += x;
             }
-        }
-        if (total >= 100 || total == 0) {
-            document.close();
+        } while (total <= 100 && x != 0);
+        if (total === 0 || total > 100) {
+            window.close();
         } else {
             document.write("The sum of the numbers is : ", total);
         }
+        // var x = prompt("Please enter the numbers");
+        // for (var i = 0; i < input; i++) {
+        //     var y = parseInt(x);
+        //     if (y === 0) {
+        //         document.close();
+        //         break;
+        //     } else {
+        //         total += y;
+        //     }
+        // }
+        // if (total >= 100 || total == 0) {
+        //     document.close();
+        // } else {
+        //     document.write("The sum of the numbers is : ", total);
+        // }
     </script>
 </body>
 
