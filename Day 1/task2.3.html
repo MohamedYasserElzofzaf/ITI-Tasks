@@ -16,30 +16,109 @@
 
 <body>
     <script>
-        // var name = do while prompt("Please enter your name ");
-        var phone = prompt(
-            "Please enter your phone number & make sure it's number and length is 8 "
+        do {
+            var name = prompt("Please enter your name ");
+        } while (!name.match(/^[a-zA-Z]*$/));
+        do {
+            var phoneNum = prompt("Please enter your phone number");
+        } while (!phoneNum.match(/^([0-9]{8})$/));
+        do {
+            var mobileNum = prompt("please enter your mobile Number");
+        } while (!mobileNum.match(/^((011)|(012)|(010)|(015))([0-9]{8,8})$/));
+        do {
+            var email = prompt("please enter your email");
+        } while (!email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/));
+
+        var color = prompt("please choose what color you like ");
+        switch (color) {
+            case "red":
+                color = "red";
+                break;
+            case "green":
+                color = "green";
+                break;
+            case "blue":
+                color = "blue";
+                break;
+            default:
+                color = "black";
+        }
+        var today = new Date();
+
+        document.write(
+            "<p style='color:" +
+            color +
+            ";'>welcome dear guest <span style='color:black'>" +
+            name +
+            "</span> </p>"
         );
-        var mobile = prompt(
-            "Please enter your mobile number & make sure it's number and length is 11 "
+        document.write(
+            "<p style='color:" +
+            color +
+            ";'>your telephone number is <span style='color:black'>" +
+            phoneNum +
+            "</span> </p>"
         );
-        var email = prompt("Please enter your email ");
-        var color = prompt(
-            "Please choose what color you want to display with [1]Red [2]Green [3]Blue "
+        document.write(
+            "<p style='color:" +
+            color +
+            ";'>your mobile number is <span style='color:black'>" +
+            mobileNum +
+            "</span> </p>"
+        );
+        document.write(
+            "<p style='color:" +
+            color +
+            ";'>your email address is <span style='color:black'>" +
+            email +
+            "</span> </p><br><br><br><br>"
+        );
+        document.write(
+            "<p style='color:" +
+            color +
+            ";'>today <span style='color:black'>" +
+            today.toDateString() +
+            "</span> </p>"
         );
 
-        document.write("Welcome dear guest ", name, "<br>");
-        if (isNaN(phone) && phone / 8 != 1) {
-            document.write("Your telephone number is Not valid");
-        } else {
-            document.write("Your telephone number is ", phone, "<br>");
-        }
-        if (isNaN(phone) && phone.length != 11) {
-            document.write("Your mobile number is Not valid");
-        } else {
-            document.write("Your mobile number is  ", mobile, "<br>");
-        }
-        document.write("Your email address is  ", email, "<br>");
+        // document.write("Welcome dear guest " + name + "<br>");
+        // document.write("Your telephone number is " + phoneNum + "<br>");
+        // document.write("Your mobile number is " + mobileNum + "<br>");
+        // document.write("Your email address is " + email + "<br>");
+
+        // var result = nmreg.test(name);
+        // if (result) {
+        //     document.getElementById("demo").innerHTML =
+        //         "Welcome dear guest " + name + "<br>";
+        // }
+        // do {
+        //     document.getElementById("demo").innerHTML =
+        //         "Welcome dear guest " + name + "<br>";
+        //     // document.write("Welcome dear guest " + name + "<br>");
+        // } while (name.match(nmreg));
+
+        // var phone = prompt(
+        //     "Please enter your phone number & make sure it's number and length is 8 "
+        // );
+        // var mobile = prompt(
+        //     "Please enter your mobile number & make sure it's number and length is 11 "
+        // );
+        // var email = prompt("Please enter your email ");
+        // var color = prompt(
+        //     "Please choose what color you want to display with [1]Red [2]Green [3]Blue "
+        // );
+
+        // if (isNaN(phone) && phone / 8 != 1) {
+        //     document.write("Your telephone number is Not valid");
+        // } else {
+        //     document.write("Your telephone number is ", phone, "<br>");
+        // }
+        // if (isNaN(phone) && phone.length != 11) {
+        //     document.write("Your mobile number is Not valid");
+        // } else {
+        //     document.write("Your mobile number is  ", mobile, "<br>");
+        // }
+        // document.write("Your email address is  ", email, "<br>");
     </script>
 </body>
 
