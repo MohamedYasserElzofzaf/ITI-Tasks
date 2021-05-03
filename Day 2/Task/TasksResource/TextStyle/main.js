@@ -1,37 +1,37 @@
 var style;
 
-function ChangeFont(x) {
-    style = document.getElementById("PAR").style.fontFamily = x;
+function ChangeFont(value) {
+    style = document.getElementById("PAR").style.fontFamily = value;
 }
 
-function ChangeAlign(x) {
-    style = document.getElementById("PAR").style.textAlign = x;
+function ChangeAlign(value) {
+    style = document.getElementById("PAR").style.textAlign = value;
 }
 
-function ChangeHeight(x) {
-    style = document.getElementById("PAR").style.lineHeight = x;
+function ChangeHeight(value) {
+    style = document.getElementById("PAR").style.lineHeight = value;
 }
 
-function ChangeLSpace(x) {
-    style = document.getElementById("PAR").style.letterSpacing = x;
+function ChangeLSpace(value) {
+    style = document.getElementById("PAR").style.letterSpacing = value;
 }
 
-function ChangeIndent(x) {
-    style = document.getElementById("PAR").style.textIndent = x;
+function ChangeIndent(value) {
+    style = document.getElementById("PAR").style.textIndent = value;
 }
 
-function ChangeTransform(x) {
-    style = document.getElementById("PAR").style.textTransform = x;
+function ChangeTransform(value) {
+    style = document.getElementById("PAR").style.textTransform = value;
 }
 
-function ChangeDecorate(x) {
-    style = document.getElementById("PAR").style.textDecoration = x;
+function ChangeDecorate(value) {
+    style = document.getElementById("PAR").style.textDecoration = value;
 }
 
-function ChangeBorder(x) {
-    style = document.getElementById("PAR").style.borderStyle = x;
+function ChangeBorder(value) {
+    style = document.getElementById("PAR").style.borderStyle = value;
 }
 
-function ChangeBorderColor(x) {
-    style = document.getElementById("PAR").style.borderColor = x;
+function ChangeBorderColor(value) {
+    style = document.getElementById("PAR").style.borderColor = value;
 }
