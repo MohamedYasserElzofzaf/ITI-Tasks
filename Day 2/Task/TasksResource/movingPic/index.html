@@ -6,8 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        div {
+            border: 3px solid rgb(32, 49, 145);
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+        
+        #icon1 {
+            position: absolute;
+            left: 45%;
+            bottom: 0;
+        }
+        
+        #icon2 {
+            position: absolute;
+            top: 45%;
+            left: 0;
+        }
+        
+        #icon3 {
+            position: absolute;
+            top: 45%;
+            right: 0;
+        }
+    </style>
 </head>
 
-<body></body>
+<body>
+    <div>
+        <img src="icon1.gif" alt="" id="icon1" />
+        <img src="icon2.gif" alt="" id="icon2" />
+        <img src="TOP.JPG" alt="" id="icon3" />
+    </div>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+    <button onclick="reset()">rest</button>
+</body>
 
 </html>
