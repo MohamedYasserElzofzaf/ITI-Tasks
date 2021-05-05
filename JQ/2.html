@@ -159,9 +159,9 @@
             });
 
             // •	 My list
-            $(".content ul li ul li:first").css("color", "red");
-            $(".content ul li ul li:nth-child(4)").css("color", "blue");
-            $(".content ul li ul li:last").css("color", "#ff08");
+            $(".content ul li:first").css("color", "#3399ff");
+            $(".content ul li:nth-child(4)").css("color", "#003399");
+            $(".content ul li:last").css("color", "#6600cc");
 
             // ---------------
             $("#nav li a:first").css("color", "red");
@@ -171,12 +171,12 @@
             $("div h2").siblings("p,span,h1").css("color", "red");
 
             /* •	My list 
-                                                    •	Item 1
-                                                    •	Item 2
-                                                    •	Item 3 // make all next this item colored
-                                                    •	Item 4 
-                                                    •	Item 5 
-                                                    */
+                                                            •	Item 1
+                                                            •	Item 2
+                                                            •	Item 3 // make all next this item colored
+                                                            •	Item 4 
+                                                            •	Item 5 
+                                                            */
             $('ul li ul li:contains("item 3")')
                 .nextAll("li")
                 .css("color", "orange");
@@ -188,15 +188,15 @@
 
             // ======================================
             /* 
-                                                Make these items colored using ONE LINE OF CODE
+                                                        Make these items colored using ONE LINE OF CODE
 
-                                                •	My list 
-                                                •	Item 1 // make it colored 
-                                                •	Item 2
-                                                •	Item 3
-                                                •	Item 4
-                                                •	Item 5 // make it colored
-                                            */
+                                                        •	My list 
+                                                        •	Item 1 // make it colored 
+                                                        •	Item 2
+                                                        •	Item 3
+                                                        •	Item 4
+                                                        •	Item 5 // make it colored
+                                                    */
 
             $("ul li ul li").filter(":eq(0),:eq(3),:eq(4)").css("color", "blue");
 
