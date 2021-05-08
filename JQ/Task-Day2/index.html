@@ -21,18 +21,53 @@
         <img src="OIP.jpg" alt="" id="img1" />
         <hr />
         <img src="orange.jpg" alt="" id="img2" />
-        <br />
-        <br />
-        <br />
-        <button id="start">Start</button>
-        <button id="reset">Reset</button>
     </div>
 
+    <button id="start">Start</button>
+    <button id="reset">Reset</button>
+
+    <br />
+    <p></p>
     <script>
         $("img").css({
             position: "relative",
             width: "100px",
             height: "100px",
+        });
+
+        var speed1 = Math.floor(Math.random() * 1000);
+        var speed2 = Math.floor(Math.random() * 1000);
+
+        $("#start").click(function() {
+            $("#img1").animate({
+                    left: "90%",
+                },
+                speed1,
+                "linear"
+            );
+            $("#img2").animate({
+                    left: "90%",
+                },
+                speed2,
+                "linear",
+                function() {
+                    if (speed1 <= speed2) {
+                        $("p").text("The winner is the REEEEEEEEEEEEEED");
+                    } else {
+                        $("p").text("The winner is the ORANGEEEEEE");
+                    }
+                }
+            );
+        });
+
+        $("#reset").click(function() {
+            $("#img1").animate({
+                left: "0"
+            }, 0);
+            $("#img2").animate({
+                left: "0"
+            }, 0);
+            $("p").text("");
         });
     </script>
 </body>
