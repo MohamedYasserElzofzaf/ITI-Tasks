@@ -6,14 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootstrap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        #nav ul li {
+            display: inline-block;
+            padding: 10px;
+        }
+        
+        ul li a {
+            color: gray;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        ul li a:hover {
+            color: white !important;
+        }
+        /* about */
+        
+        #about {
+            background-color: yellowgreen;
+            height: auto;
+            border-radius: 30px;
+        }
+        
+        #about .abt {
+            background-color: yellowgreen;
+            border-radius: 30px;
+            color: white;
+        }
+        
+        #about .imag {
+            width: 100%;
+            border-radius: 30px;
+            height: auto;
+            height: 100%;
+        }
+        
+        aside {
+            background-color: rgb(172, 169, 169);
+        }
+        /* footer */
+        
+        footer {
+            width: 100%;
+        }
+        
+        footer h4 {
+            color: white;
+        }
+        
+        .fp {
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="container row">
+    <header class="container mt-5 mb-5">
         <h1>The Flower Blog</h1>
     </header>
-    <nav class="container-fluid row col-5 bg-dark">
-        <!-- <ul class="list-group-flush">
+
+    <!-- <nav class="container-fluid row col-5 bg-dark">
+         <ul class="list-group-flush">
             <li class="list-group-item-action" aria-current="true">
                 <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Blog</a>
             </li>
@@ -23,7 +86,7 @@
             <li class="col list-group-item">
                 <a class="" href="#">Subscribe via. RSS</a>
             </li>
-        </ul> -->
+        </ul> 
         <div class="list-group list-group-item-dark">
             <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Blog</a
         >
@@ -33,18 +96,37 @@
             <a href="#" class="list-group-item list-group-item-action">Subscribe via. RSS</a
         >
       </div>
-    </nav>
-    <section class="container">
-      <header>
-        <h2>Do you love flowers as much as we do?</h2>
-      </header>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut.
-      </p>
-      <div class="bg-gradient">
-        <img src="images/intro_flower.png" alt="Flower" />
+    </nav> -->
+    <div class="bg-dark">
+        <nav id="nav" class="container">
+            <ul>
+                <li class="selected"><a class="m-3" id="start" href="#">Blog</a></li>
+                <li><a class="m-3" href="#">About</a></li>
+                <li><a class="m-3" href="#">Archives</a></li>
+                <li><a class="m-3" href="#">Contact</a></li>
+                <li class="subscribe">
+                    <img src="Images/rss.png" alt="" /><a class="m-1" href="#">Subscribe via. RSS</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- ======================================================================== -->
+    <section class="container" id="about">
+      <div class="row">
+        <div class="abt col-12 col-md-4">
+          <header>
+            <h2>Do you love flowers as much as we do?</h2>
+          </header>
+          <p class="ap">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+          </p>
+        </div>
+        <div class="col-12 col-md-8">
+          <img src="Images/intro_flower.png" class="imag img-fluid" alt="" />
+        </div>
       </div>
     </section>
   </body>
