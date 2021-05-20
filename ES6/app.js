@@ -13,6 +13,11 @@ function course(msg, options = {}) {
         courseDuration: "3days",
         courseOwner: "JavaScript",
     };
+    for (var c in options) {
+        if (c != "courseName" && c != "courseDuration" && c != "courseOwner") {
+            throw "OVERLOAD";
+        }
+    }
     let settings = Object.assign({}, defaultCourse, options);
     return (
         msg +
@@ -24,5 +29,10 @@ function course(msg, options = {}) {
         settings.courseOwner
     );
 }
-let x = course("Welcome in", { courseName: "Html5" });
+let x = course("Welcome in", {
+    courseName: "Html5",
+    courseDuration: "4 days",
+    courseOwner: "ITI",
+    // courseStudent: "4stu",
+});
 console.log(x);
