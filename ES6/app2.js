@@ -30,14 +30,14 @@ function* fibonacci2(max) {
     let x = 0;
     let y = 1;
     yield 0;
-    yield 1;
-    let next = 0;
-    while (true) {
-        next = x + y;
-        if (next > max) break;
+    // yield 1;
+    let next = 1;
+    while (next <= max) {
+        // if (next > max) break;
         yield next;
         x = y;
         y = next;
+        next = x + y;
     }
 }
 let iter2 = fibonacci2(3);

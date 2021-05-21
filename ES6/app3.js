@@ -7,8 +7,8 @@
 let object = {
     [Symbol.replace](str) {
         if (str.length > 15) {
-            let newWord = str.slice(15);
-            return ...newWord;
+            let newWord = str.slice(0, 15);
+            return newWord;
         }
     },
 };
