@@ -34,7 +34,7 @@ function createTable(data) {
             "</td><td>" +
             x["id"] +
             "</td><td>" +
-            x["joinDate"] +
+            x["Date"] +
             "</td>";
         tableBody.appendChild(row);
     }
