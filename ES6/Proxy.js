@@ -5,16 +5,16 @@
          address property that accepts only string value
          age property that accepts numerical value between 25 and 60
 */
-
+/*
 var target = {
     name: "Mohamed Yasser",
     address: "nasser city / cairo",
-    age: 34,
-};
+    age: 61,
+};*/
 var handler = {
     set: function(obj, prop, val) {
         if (prop === "name") {
-            if (typeof val !== "string" && val.length < 7)
+            if (typeof val !== "string" && val.length === 7)
                 throw new TypeError("Not req length");
             else {
                 obj[prop] = val;
@@ -27,14 +27,18 @@ var handler = {
             }
         }
         if (prop === "age") {
-            if (typeof val === "number" && val < 60 && val > 25) obj[prop] = age;
+            if (typeof val === "number" && val < 60 && val > 25) obj[prop] = val;
             else {
                 throw new TypeError("not req range");
             }
         }
     },
 };
-let myProxy = new Proxy(target, handler);
+const myProxy = new Proxy({}, handler);
+myProxy.name = "Mohamed Yasser";
+myProxy.age = 41;
+myProxy.address = "cairo";
+
+console.log(myProxy.age);
 console.log(myProxy.name);
 console.log(myProxy.address);
-console.log(myProxy.age);
