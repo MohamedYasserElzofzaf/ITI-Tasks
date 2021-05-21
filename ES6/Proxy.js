@@ -6,6 +6,8 @@
          age property that accepts numerical value between 25 and 60
 */
 
-var target = {};
+var target = {
+    name: "Mohamed Yasser",
+};
 var handler = {};
 let myProxy = new Proxy(target, handler);
