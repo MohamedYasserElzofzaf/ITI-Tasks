@@ -34,7 +34,7 @@ var handler = {
     },
 };
 const myProxy = new Proxy({}, handler);
-myProxy.name = "Mohamed Yasser";
+myProxy.name = "Mohr";
 myProxy.age = 41;
 myProxy.address = "cairo";
 
