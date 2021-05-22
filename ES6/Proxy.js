@@ -14,10 +14,9 @@ var target = {
 var handler = {
     set: function(obj, prop, val) {
         if (prop === "name") {
-            if (typeof val !== "string" && val.length === 7)
-                throw new TypeError("Not req length");
+            if (typeof val === "string" && val.length === 7) obj[prop] = val;
             else {
-                obj[prop] = val;
+                throw new TypeError("Not req length");
             }
         }
         if (prop === "address") {
