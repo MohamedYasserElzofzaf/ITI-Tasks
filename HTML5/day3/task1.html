@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        form>div>.req {
+            padding: 0 40px 0 60px;
+            color: red;
+            overflow: hidden;
+            transition: 0.3s;
+            max-height: 0;
+        }
+        
+        input[type="name"]:invalid~.req,
+        input[type="email"]:invalid~.req {
+            max-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="">Name</label>
+            <input type="name" name="name" id="name" required placeholder="Enter Name" pattern="[A-Za-z]{4,10}" />
+            <p class="req">Please Enter Your Name</p>
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="email" name="email" id="email" required placeholder="Enter Email" />
+            <p class="req">Please Enter Your Email</p>
+        </div>
+
+        <button>change</button>
+    </form>
+</body>
+
+</html>
