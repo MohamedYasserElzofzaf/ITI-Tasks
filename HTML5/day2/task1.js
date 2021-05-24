@@ -1,0 +1,18 @@
+var can = document.getElementById("canvas");
+var context = can.getContext("2d");
+var gradin = context.createLinearGradient(20, 30, 20, 180);
+gradin.addColorStop(0, "#a6d6d6");
+gradin.addColorStop(1, "white");
+context.fillStyle = gradin;
+context.fillRect(10, 10, 450, 120);
+var gradin1 = context.createLinearGradient(20, 150, 20, 180);
+gradin1.addColorStop(0, "green");
+gradin1.addColorStop(1, "white");
+context.fillStyle = gradin1;
+context.fillRect(10, 100, 450, 150);
+context.moveTo(120, 150);
+context.lineTo(120, 60);
+context.lineTo(270, 60);
+context.lineTo(270, 150);
+context.lineWidth = 3;
+context.stroke();
