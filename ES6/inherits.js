@@ -5,7 +5,7 @@ class polygon {
         this.width = width;
         this.height = height;
     }
-    Area() {
+    calcArea() {
         return this.width * this.height;
     }
 }
@@ -14,7 +14,9 @@ class rectangle extends polygon {
         super(width, height);
     }
     toString() {
-        return `Width: ${this.width}, Height: ${this.height}, Area: ${this.Area}`;
+        return `Width: ${this.width}, Height: ${
+      this.height
+    }, Area: ${this.calcArea()}`;
     }
 }
 class square extends polygon {
@@ -22,7 +24,21 @@ class square extends polygon {
         super(side, side);
     }
     toString() {
-        return `Side: ${this.width}, Area: ${this.Area}`;
+        return `Side: ${this.width}, Area: ${this.calcArea()}`;
+    }
+}
+
+class traingle extends polygon {
+    constructor(base, height) {
+        super(base, height);
+    }
+    calcArea() {
+        return (this.width * this.height) / 2;
+    }
+    toString() {
+        return `Base: ${this.base}, Height: ${
+      this.height
+    }, Area: ${this.calcArea()}`;
     }
 }
 
@@ -30,10 +46,20 @@ class circle {
     constructor(redius) {
         this.redius = redius;
     }
-    Area() {
+    calcArea() {
         return this.redius * this.redius * Math.PI;
     }
     toString() {
-        return `Redius: ${this.redius}, Area: ${this.Area}`;
+        return `Redius: ${this.redius}, Area: ${this.calcArea()}`;
     }
 }
+
+let rec = new rectangle(50, 30);
+let sqr = new square(25);
+let trai = new traingle(70, 40);
+let cir = new circle(30);
+
+console.log(rec);
+console.log(sqr);
+console.log(trai);
+console.log(cir);
