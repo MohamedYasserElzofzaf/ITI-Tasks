@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #video_box {
+            width: 600px;
+            background-color: #000;
+            margin: 0px auto;
+        }
+        
+        #video_controls_bar {
+            background-color: #333;
+            padding: 10px;
+        }
+        
+        span {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="video_box">
+        <video id="my_video" width="500" height="300">
+        <source src="frozen.mp4" />
+      </video>
+        <div id="video_controls_bar">
+            <button id="playpausebtn" onclick="playpause(this,'my_video')">
+          play
+        </button>
+            <input type="range" id="seekslider" max="100" min="0" value="0" step="1" />
+            <span id="curnttimetext">00 : 00</span> /
+            <span id="durtiontimetext">00 : 00</span>
+            <button id="mutebtn">mute</button>
+            <input type="range" id="volumslider" min="0" max="100" value="100" step="1" />
+            <button id="fullscreen">full</button>
+        </div>
+    </div>
+
+    <script src="task2.js"></script>
+</body>
+
+</html>
