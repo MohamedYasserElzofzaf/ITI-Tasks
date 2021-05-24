@@ -25,3 +25,15 @@ class square extends polygon {
         return `Side: ${this.width}, Area: ${this.Area}`;
     }
 }
+
+class circle {
+    constructor(redius) {
+        this.redius = redius;
+    }
+    Area() {
+        return this.redius * this.redius * Math.PI;
+    }
+    toString() {
+        return `Redius: ${this.redius}, Area: ${this.Area}`;
+    }
+}
