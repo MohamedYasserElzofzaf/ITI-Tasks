@@ -17,3 +17,11 @@ class rectangle extends polygon {
         return `Width: ${this.width}, Height: ${this.height}, Area: ${this.Area}`;
     }
 }
+class square extends polygon {
+    constructor(side) {
+        super(side, side);
+    }
+    toString() {
+        return `Side: ${this.width}, Area: ${this.Area}`;
+    }
+}
