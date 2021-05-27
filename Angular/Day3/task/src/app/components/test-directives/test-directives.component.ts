@@ -11,14 +11,24 @@ export class TestDirectivesComponent {
   phrase:string = "";
   name:string = "";
   age:number=0;
+  persons:{name:string, age:number}[]=[];
 
   AddHello(){
     this.phrase="Hello";
   }
 
- /* wdown:string = "";
-  getData(data:any){
-    this.wdown = data.target.value;
+  get NameValid(){
+    return this.name!="" && this.name.length>=3;
   }
-*/
+
+  get AgeValid(){
+    return this.age>18;
+  }
+
+  AddNewPerson(){
+    let person:{name:string, age:number} = {name:this.name, age:this.age};
+
+    if(this.AgeValid && this.NameValid)
+      this.persons.push(person);
+  }
 }

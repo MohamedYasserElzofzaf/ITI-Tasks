@@ -5,7 +5,7 @@
     <button class="btn" type="button" (click)="AddHello()">Hello</button>
 </div>
 
-<!-- <p>================================================================================</p>
+<p>===============================================================================================================</p>
 <div>
     <input type="text" placeholder="Enter Name" [(ngModel)]="name">
 
@@ -17,11 +17,11 @@
     <div *ngIf="age<18 && age!=0" style="background-color: red; width: 30%; height: 15px;">
         Not Valid
     </div>
-    <input type="button" value="Add" (click)="AddNewStudent()">
+    <input type="button" value="Add" (click)="AddNewPerson()">
 
 </div>
 
-<h2>Student</h2>
+<h2>Person</h2>
 <table id="customers">
     <thead>
         <tr>
@@ -31,11 +31,11 @@
         </tr>
     </thead>
     <tbody>
-        
-<tr *ngFor="let s of students; index as i">
-    <td>{{i+1}}</td>
-    <td>{{s.name}}</td>
-    <td>{{s.age}}</td>
-</tr>
-</tbody>
-</table> -->
+
+        <tr *ngFor="let p of persons; index as i">
+            <td>{{i+1}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.age}}</td>
+        </tr>
+    </tbody>
+</table>
