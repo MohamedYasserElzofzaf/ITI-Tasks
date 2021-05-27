@@ -1,0 +1,51 @@
+div {
+    border: 1px solid black;
+    background-color: cyan;
+    margin: auto;
+    padding: 10px;
+}
+
+div * {
+    display: block;
+    margin: 10px auto;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    height: 20px;
+    text-align: center;
+}
+
+.btn {
+    width: 100px;
+    height: 20px;
+    color: #ddd;
+    background-color: rgb(2, 29, 44);
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
