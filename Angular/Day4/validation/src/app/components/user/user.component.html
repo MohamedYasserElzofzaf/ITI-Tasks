@@ -1,0 +1,58 @@
+<div style="overflow-x: auto; overflow-y: scroll; height: 500px; width: 70%;">
+    <table class="table table-bordered border-primary">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">UserName</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address
+            <tr>
+                <th scope="col">Street</th>
+                <th scope="col">Suite</th>
+                <th scope="col">City</th>
+                <th scope="col">Zipcode</th>
+            </tr>
+            </th>
+            <th scope="col">Phone</th>
+            <th scope="col">Website</th>
+            <th scope="col">Company
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">catchPhrase</th>
+                    <th scope="col">Bs</th>
+                </tr>
+            </th>
+            <th scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of user">
+                <th scope="row">{{u.id}}</th>
+                <td>{{u.name}}</td>
+                <td>{{u.username}}</td>
+                <td>{{u.email}}</td>
+                <td>
+            <tr>
+                <td>{{u.address.street}}</td>
+                <td>{{u.address.suite}}</td>
+                <td>{{u.address.city}}</td>
+                <td>{{u.address.zipcode}}</td>
+                <td>
+            </td>
+            </tr>
+            </td>
+            <td>{{u.phone}}</td>
+            <td>{{u.website}}</td>
+            <td>
+                <tr>
+                    <td>{{u.company.name}}</td>
+                    <td>{{u.company.catchPhrase}}</td>
+                    <td>{{u.company.bs}}</td>
+                </tr>
+            </td>
+            <td><a routerLink="{{u.id}}">details</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,23 @@
+<div class="card" style="width: 18rem; margin: auto;" *ngIf="user;else NoFound">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ID : {{user.id}}</li>
+      <li class="list-group-item">name : {{user.name}}</li>
+      <li class="list-group-item">username : {{user.username}}</li>
+      <li class="list-group-item">email : {{user.email}}</li>
+      <li class="list-group-item">street : {{user.address.street}}</li>
+      <li class="list-group-item">suite : {{user.address.suite}}</li>
+      <li class="list-group-item">city : {{user.address.city}}</li>
+      <li class="list-group-item">zipcode : {{user.address.zipcode}}</li>
+      <li class="list-group-item">lat : {{user.address.geo.lat}}</li>
+      <li class="list-group-item">lng : {{user.address.geo.lng}}</li>
+      <li class="list-group-item">phone : {{user.phone}}</li>
+      <li class="list-group-item">website : {{user.website}}</li>
+      <li class="list-group-item">company Name : {{user.company.name}}</li>
+      <li class="list-group-item">catchPhrase : {{user.company.catchPhrase}}</li>
+      <li class="list-group-item">bs : {{user.company.bs}}</li>
+    </ul>
+  </div>
+
+  <ng-template #NoFound>
+    <h1>Loading Data....</h1>
+  </ng-template>
