@@ -14,7 +14,10 @@ import {
 export class StudentComponent implements OnInit, OnChanges {
   constructor() {}
   ngOnChanges(changes: SimpleChanges): void {
-    if (!changes.ourStudent.firstChange) {
+    // if (!changes.ourStudent.currentValue) {
+    //   this.studList.push(this.ourStudent);
+    // }
+    if (this.ourStudent) {
       this.studList.push(this.ourStudent);
     }
   }
