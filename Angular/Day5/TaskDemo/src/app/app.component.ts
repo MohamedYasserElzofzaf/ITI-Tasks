@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'routings';
 
-  students: { fname: string; lname: string }[] = [];
+  // students: { fname: string; lname: string }[] = [];
+  oneStudent: any;
   reciveData(data: any) {
-    this.students.push(data);
+    // this.students.push(data);
+    this.oneStudent = data;
   }
 }

@@ -9,5 +9,6 @@ export class StudentComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  @Input() studList: { fname: string; lname: string }[] = [];
+  // @Input() studList: { fname: string; lname: string }[] = [];
+  @Input() ourStudent: any;
 }
