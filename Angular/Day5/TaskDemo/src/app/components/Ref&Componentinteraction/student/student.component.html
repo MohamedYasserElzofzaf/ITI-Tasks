@@ -8,10 +8,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let s of studList">
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
+            <td>{{ s.fname }}</td>
+            <td>{{ s.lname }}</td>
         </tr>
     </tbody>
 </table>

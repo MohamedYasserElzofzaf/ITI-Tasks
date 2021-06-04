@@ -1,16 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class StudentComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
+  @Input() studList: { fname: string; lname: string }[] = [];
 }
