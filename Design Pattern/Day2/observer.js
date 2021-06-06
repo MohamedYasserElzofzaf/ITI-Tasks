@@ -20,24 +20,41 @@ h- Send Private Messages From MyAccount To Acc1 (Bonus)
 
 class FacebookActions {
     constructor() {
-        this.Followers = [];
-        this.MyTwittes = [];
+        this.Friends = [];
+        this.Posts = [];
+        this.Messages = [];
+        this.Comments = [];
     }
-    Follow(FacebookAccout) {
-        this.Followers.push(FacebookAccout);
+    Friend(targetFacebookAccount) {
+        this.Friends.push(targetFacebookAccount);
+        console.log("Freind");
     }
-    UnFollow(targetFacebookAccunt) {
-        this.Followers = this.Followers.filter((account) => {
-            if (targetFacebookAccunt != account) {
+    UnFriend(targetFacebookAccount) {
+        this.Friends = this.Friends.filter((account) => {
+            if (targetFacebookAccount != account) {
                 return account;
             }
         });
     }
-    addTwittes(Twitte) {
-        this.MyTwittes.push(Twitte);
-        this.Followers.forEach((follower) => {
-            follower.notify(Twitte, this);
+    MessageAll(msg) {
+        this.Messages.push(msg);
+        this.Friends.forEach((Friend) => {
+            Friend.notifyMessage(msg, this);
         });
+    }
+    addPosts(Post) {
+        this.Posts.push(Post);
+        this.Friends.forEach((Friend) => {
+            Friend.notify(Post, this);
+        });
+    }
+    Comments(friend, post, comment) {
+        for (let i of friend.Posts) {
+            if (friend.Posts[i] == post) {
+                this.Comments.push(comment);
+                this.notifyComment(comment, post);
+            }
+        }
     }
 }
 class FacebookAccount extends FacebookActions {
@@ -46,14 +63,23 @@ class FacebookAccount extends FacebookActions {
         this.Name = _Name;
         this.Age = _Age;
     }
-    notify(twittes, owner) {
-        console.log(owner.Name, "Twittes this ", twittes);
+    notify(Posts, owner) {
+        console.log(`${owner.Name} Posts this ${Posts}`);
+    }
+    notifyMessage(Message, owner) {
+        console.log(`${owner.Name} Send this ${Message} To all friends`);
+    }
+    notifyComment(comment, post) {
+        console.log(
+            `${this.Name} comment this ${comment} on this post of yours ${post}`
+        );
     }
 }
-let MyAccount = new FacebookAccount("Nadia", 29);
+let MyAccount = new FacebookAccount("yasser", 27);
 let AhmedAccount = new FacebookAccount("Ahmed", 30);
-let MarwaAccount = new FacebookAccount("Marwa", 27);
-let EmanAccount = new FacebookAccount("Eman", 23);
-MyAccount.Follow(AhmedAccount);
-MyAccount.Follow(EmanAccount);
-MyAccount.addTwittes("My first Twitte from JS");
+let AliAccount = new FacebookAccount("ali", 21);
+let EmanAccount = new FacebookAccount("Eman", 18);
+MyAccount.Friend(AhmedAccount);
+MyAccount.Friend(EmanAccount);
+
+MyAccount.addPosts("My first Post from JS");
