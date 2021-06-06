@@ -6,6 +6,16 @@
     Create Class Property that counts numbers of created objects and Class method to retrieve it.
 */
 
-class Rectangle {
-    constructor() {}
+function Rectangle(width, height) {
+    this.width = width;
+    this.height = height;
+    this.area = function() {
+        return this.width * this.height;
+    };
+    this.perimeter = function() {
+        return 2 * (this.width + this.height);
+    };
+    this.toString = function() {
+        return `The Height is : ${this.height} , the width is : ${this.width} , Area is : ${this.area} , Perimeter is : ${this.perimeter} `;
+    };
 }
