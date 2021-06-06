@@ -1,24 +1,24 @@
-export class Developer {
+export default class Designers {
     constructor(_name, _age, _salary, _status) {
         this.name = _name;
         this.age = _age;
         this.salary = _salary;
-        this.type = "Developer";
+        this.department = "Designing";
         this.status = _status;
         if (this.status) {
-            this.leader = new DeveloperLeader(this.name, this.type);
+            this.leader = new DesignerLeader(this.name, this.department);
         }
     }
 }
 
-class DeveloperLeader {
-    constructor(name, type) {
-        if (DeveloperLeader.instance != null) {
+class DesignerLeader {
+    constructor(name, department) {
+        if (DesignerLeader.instance != null) {
             throw Error("there is already a leader");
         }
         this.name = name;
-        this.type = type;
+        this.department = department;
         this.msg = "Look at me , I'm the captain now";
-        DeveloperLeader.instance = this;
+        DesignerLeader.instance = this;
     }
 }

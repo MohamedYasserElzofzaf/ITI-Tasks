@@ -1,4 +1,4 @@
-export class Tester {
+export default class Tester {
     constructor(_name, _age, _salary, _status) {
         this.name = _name;
         this.age = _age;
