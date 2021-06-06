@@ -10,3 +10,15 @@ export class Developer {
         }
     }
 }
+
+class DeveloperLeader {
+    constructor(name, type) {
+        if (DeveloperLeader.instance != null) {
+            throw Error("there is already a leader");
+        }
+        this.name = name;
+        this.type = type;
+        this.msg = "Look at me , I'm the captain now";
+        DeveloperLeader.instance = this;
+    }
+}
