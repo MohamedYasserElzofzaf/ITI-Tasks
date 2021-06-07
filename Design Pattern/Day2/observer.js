@@ -27,7 +27,7 @@ class FacebookActions {
     }
     Friend(targetFacebookAccount) {
         this.Friends.push(targetFacebookAccount);
-        console.log("Freind");
+        console.log("Friend");
     }
     UnFriend(targetFacebookAccount) {
         this.Friends = this.Friends.filter((account) => {
