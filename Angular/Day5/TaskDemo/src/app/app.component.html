@@ -1,2 +1,23 @@
 <app-register (ourEvent)="reciveData($event)"></app-register>
 <app-student [ourStudent]="oneStudent"></app-student>
+
+<ul>
+    <li>
+        <a [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" routerLink="">Students</a
+    >
+  </li>
+  <li>
+    <a
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      routerLink="students"
+      >Students</a
+    >
+  </li>
+  <li>
+    <a routerLinkActive="active" routerLink="students/5">Students Details</a>
+    </li>
+    <li><a routerLinkActive="active" routerLink="about">About</a></li>
+    <li><a routerLinkActive="active" routerLink="error">Error</a></li>
+</ul>
+<app-students></app-students>
