@@ -1,0 +1,6 @@
+Most modern design and development software
+ tools ship with a built-in lorem ipsum generator or enable 
+ you to easily install a plugin (or “package”) generator. 
+ Here are the instructions for generating lorem ipsum in some of the most common design and dev tools.
+
+C/O https://placeholder.com/text/lorem-ipsum/#Visual_Studio_Code
