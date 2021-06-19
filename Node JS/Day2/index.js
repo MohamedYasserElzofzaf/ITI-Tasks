@@ -1,32 +1,57 @@
 var http = require("http");
-var fs = require("fs");
+var fs = require("fs/promises");
+let home;
+fs.readdir("./resources")
+    .then((data) => {
+        home = data;
+    })
+    .catch((err) => {
+        throw err;
+    });
 const server = http.createServer((req, res) => {
-    switch (req.url) {
-        case "/":
+            switch (req.url) {
+                case "/":
+                    {
+                        res.writeHead(200, {
+                            "content-type": "text/html",
+                        });
+                        home.map((file) => {
+                            res.write(`<li><a href="${file}">${file}</a></li><br>`);
+                        });
+                        res.end();
+                        break;
+                    }
+                    /* case "/index.html":
             {
-                let home = fs.readFileSync("./resources/index.html");
                 res.writeHead(200, {
                     "content-type": "text/html",
                 });
-                res.write(home);
+                fs.readFile(`./resources/index.html`).then((file) => {
+                    res.write(file);
+                    res.end();
+                });
                 break;
             }
         case "/image":
             {
-                let image = fs.readFileSync("./resources/ted.jpg");
                 res.writeHead(200, {
                     "content-type": "image/jpg",
                 });
-                res.write(image);
+                fs.readFile(`./resources/ted.jpg`).then((image) => {
+                    res.write(image);
+                    res.end();
+                });
                 break;
             }
         case "/text":
             {
-                let file = fs.readFileSync("./resources/text.txt");
                 res.writeHead(200, {
                     "content-type": "text/txt",
                 });
-                res.write(file);
+                fs.readFile(`./resources/text.txt`).then((file) => {
+                    res.write(file);
+                    res.end();
+                });
                 break;
             }
         default:
@@ -34,8 +59,7 @@ const server = http.createServer((req, res) => {
                 res.statusCode = 404;
                 res.end();
             }
-    }
-});
-server.listen(8000, () => {
-    console.log("server is listening");
-});
+    }*/
+            }); server.listen(8000, () => {
+            console.log("server is listening");
+        });
