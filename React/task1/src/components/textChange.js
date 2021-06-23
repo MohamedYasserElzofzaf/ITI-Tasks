@@ -1,28 +1,31 @@
-import { render } from "@testing-library/react";
 import React from "react";
 
-export default class TextChange extends React.Component {
+class Text extends React.Component {
     constructor() {
         super();
 
         this.state = {
             txt: "",
         };
+        // this.changeText = this.changeText.bind(this);
+        // this.reset = this.reset.bind(this);
     }
 
     changeText = (e) => {
-        console.log(e.target.value);
         this.setState({ txt: e.target.value });
     };
-
+    reset = () => {
+        this.setState({ txt: "" });
+    };
     render() {
         const styles = {
             container: {
-                backgroundColor: "lightgrey",
+                backgroundColor: "skyBlue",
                 padding: "5px",
                 margin: "5px auto",
                 border: "2px solid black",
                 borderRadius: "10px",
+                textAlign: "center",
             },
             header: { textAlign: "center", borderBottom: "2px solid black" },
         };
@@ -34,15 +37,14 @@ export default class TextChange extends React.Component {
             value = { this.state.txt }
             onChange = { this.changeText }
             />{" "} <
+            p > { this.state.txt } < /p>{" "} <
             input type = "button"
             value = "Reset"
-            onClick = {
-                () => {
-                    this.setState({});
-                }
-            }
+            onClick = { this.reset }
             />{" "} <
             /div>
         );
     }
 }
+
+export default Text;
