@@ -1,7 +1,7 @@
 import { func } from "prop-types";
 import React from "react";
 import Text from "./components/TextChange";
-import imageSlider from "./components/slider";
+import ImageSlider from "./components/slider";
 
 function App() {
     return ( <
@@ -9,7 +9,7 @@ function App() {
         <
         Text / >
         <
-        imageSlider / >
+        ImageSlider / >
         <
         /div>
     );
