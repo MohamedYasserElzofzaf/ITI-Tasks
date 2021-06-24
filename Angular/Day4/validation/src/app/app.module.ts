@@ -1,32 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
-import { StudentsComponent } from './components/students/students/students.component';
-import { StudentDetailsComponent } from './components/studentDetails/student-details/student-details.component';
-import { AboutComponent } from './components/about/about/about.component';
-import { ErrorComponent } from './components/error/error/error.component';
+import { UserComponent } from './components/user/user.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { ErrorComponent } from './components/error/error.component';
 import { RouterModule, Routes } from '@angular/router';
 
-
-const routes:Routes=[
-  {path:'',component:StudentsComponent},
-  {path:'students',component:StudentsComponent},
-  {path:'students/:id',component:StudentDetailsComponent},
-  {path:'about',component:AboutComponent},
-  {path:'**',component:ErrorComponent}
+const routes: Routes=[
+  {path:'',redirectTo:'user',pathMatch:"full"},
+  {path:'user',component:UserComponent},
+  {path:'user/:id',component:UserDetailsComponent},
+  {path:'**',component:ErrorComponent},
 ]
-
 @NgModule({
   declarations: [
     AppComponent,
-    StudentsComponent,
-    StudentDetailsComponent,
-    AboutComponent,
+    UserComponent,
+    UserDetailsComponent,
     ErrorComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

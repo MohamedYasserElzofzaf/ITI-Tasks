@@ -72,6 +72,8 @@ class imageSlider extends React.Component {
             src = { this.state.imgURL }
             alt = "TedLasso" / >
             <
+            div >
+            <
             input type = "button"
             style = { styles.btn }
             value = "Next"
@@ -82,6 +84,7 @@ class imageSlider extends React.Component {
             value = "Previous"
             onClick = { this.prev }
             />{" "} <
+            /div>{" "} <
             /div>
         );
     }
