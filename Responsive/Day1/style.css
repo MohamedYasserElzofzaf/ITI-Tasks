@@ -1,11 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    flex: 1;
+}
+
+#main>article {
+    flex: 1;
+}
+
+#main>nav,
+#main>aside {
+    flex: 0 0 20vw;
+    background: beige;
+}
+
+#main>nav {
+    order: -1;
+}
+
+
 /* ============================================nav bar ======================================= */
 
-.HeaderFooter {
-    width: 100%;
-    background-color: gray;
-    color: hotpink;
-    text-align: center;
-    height: 30px;
+header,
+footer {
+    height: auto;
 }
 
 ul {
@@ -73,13 +101,19 @@ button:hover {
     background-color: #f44336;
 }
 
-.container {
+
+/* .container {
     padding: 16px;
-}
+} */
 
 span.psw {
     float: right;
     padding-top: 16px;
+}
+
+.ted {
+    width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width: 300px) {
