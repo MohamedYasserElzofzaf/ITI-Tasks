@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(98, 98, 199);
+    height: 10vh;
+    padding: 1em;
+    width: 100%;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+}
