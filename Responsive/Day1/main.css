@@ -9,6 +9,9 @@ body {
     margin: 0;
 }
 
+
+/* =====================header=============================== */
+
 header {
     background-color: rgb(98, 98, 199);
     height: 10vh;
@@ -18,4 +21,32 @@ header {
     font-weight: bolder;
     text-align: center;
     color: white;
+}
+
+
+/* ========================main body===================== */
+
+#main {
+    display: flex;
+    flex: 1;
+}
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #111;
 }
