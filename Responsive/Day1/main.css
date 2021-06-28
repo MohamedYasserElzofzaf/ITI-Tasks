@@ -50,3 +50,19 @@ a {
 a:hover {
     background-color: #111;
 }
+
+
+/* ================================= center=============================== */
+
+#main>article {
+    flex: 1;
+    padding: 1em;
+    background-color: rgb(60, 54, 114);
+    text-align: center;
+}
+
+#main>aside {
+    flex: 0 0 20vw;
+    background: rgb(106, 112, 148);
+    padding: 1em;
+}
