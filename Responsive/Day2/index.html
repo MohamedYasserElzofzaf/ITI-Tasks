@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+        
+        .col-1 {
+            width: 6.25%;
+        }
+        
+        .col-2 {
+            width: 12.5%;
+        }
+        
+        .col-3 {
+            width: 18.75%;
+        }
+        
+        .col-4 {
+            width: 25%;
+        }
+        
+        .col-5 {
+            width: 31.25%;
+        }
+        
+        .col-6 {
+            width: 37.5%;
+        }
+        
+        .col-7 {
+            width: 43.75%;
+        }
+        
+        .col-8 {
+            width: 50%;
+        }
+        
+        .col-9 {
+            width: 56.25%;
+        }
+        
+        .col-10 {
+            width: 62.5%;
+        }
+        
+        .col-11 {
+            width: 68.75%;
+        }
+        
+        .col-12 {
+            width: 75%;
+        }
+        
+        .col-13 {
+            width: 81.25%;
+        }
+        
+        .col-14 {
+            width: 87.5%;
+        }
+        
+        .col-15 {
+            width: 93.75%;
+        }
+        
+        .col-16 {
+            width: 100%;
+        }
+        
+        .header {
+            background-color: rgb(29, 97, 97);
+            color: #a8c3c3;
+            font-size: 1.3em;
+        }
+        
+        .header img {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+        
+        h3 {
+            background-color: rgb(32, 75, 218);
+            color: rgb(248, 248, 251);
+            font-size: 1.3em;
+            padding: 10px;
+        }
+        
+        .main {
+            font-size: 1.2em;
+        }
+        
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+        
+        .footer1 {
+            background-color: rgb(32, 218, 72);
+        }
+        
+        .footer2 {
+            background-color: rgb(100, 0, 139);
+        }
+        
+        .footer3 {
+            background-color: rgb(218, 32, 110);
+        }
+    </style>
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="row header">
+        <div class="col-2"></div>
+        <div class="col-6">
+            <img src="img.jpg">
+        </div>
+        <div class="col-8">
+            <h1>Mohamed Yasser</h1>
+            <p>the movie guy</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6 main">
+            <h3>Summary</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam perspiciatis velit ipsa! Ut similique ducimus earum neque quia modi voluptates inventore nobis? Atque, hic? Amet perspiciatis pariatur facilis obcaecati consectetur.
+            </p>
+            <h3>Skills</h3>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto itaque nostrum eos sequi architecto quidem rem repudiandae at, modi enim? Magni natus distinctio tenetur inventore tempore, libero sit ducimus nam.
+            </p>
+        </div>
+
+        <div class="col-8 main">
+            <h3>Work Experience</h3>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto itaque nostrum eos sequi architecto quidem rem repudiandae at, modi enim? Magni natus distinctio tenetur inventore tempore, libero sit ducimus nam.
+            </p>
+        </div>
+    </div>
+    <div class="row footer">
+        <div class="col-5 footer1">Left</div>
+        <div class="col-6 footer2">Footer</div>
+        <div class="col-5 footer3">Right</div>
+    </div>
+
+</body>
+
+</html>

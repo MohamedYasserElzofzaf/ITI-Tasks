@@ -1,0 +1,40 @@
+body {
+  font-size: 24px;
+}
+
+.sometext {
+  color: darkcyan;
+}
+
+h1 {
+  font-weight: bold;
+  border: 3px solid blue;
+  color: darkcyan;
+  padding: 10px;
+}
+
+.article {
+  border: 1px solid red;
+  padding: 20px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.imp {
+  font-weight: bolder;
+}
+/*# sourceMappingURL=style.css.map */

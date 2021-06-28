@@ -1,0 +1,58 @@
+@import "sec";
+// Variables
+$myFonts: Arial, sans-serif;
+$myColors: blue;
+$myFontSize: 24px;
+$myPadding: 10px;
+$fontColors: darkcyan;
+
+body {
+  font-size: $myFontSize;
+}
+.sometext {
+  color: $fontColors;
+}
+
+// Mixin
+@mixin style-text {
+  font-weight: bold;
+  border: 3px solid blue;
+}
+
+h1 {
+  @include style-text;
+  color: $fontColors;
+  padding: $myPadding;
+}
+
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+// Include
+.article {
+  @include bordered(red, 1px);
+  padding: $myPadding + 10;
+}
+
+// Nesting
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+// Import
+.imp {
+    font-weight: $myBoldFont;
+}
