@@ -106,6 +106,8 @@ class Home extends React.Component {
             /div> <
             /div>
 
+            { /* table */ }
+
             <
             table className = "table" >
             <
