@@ -70,8 +70,9 @@ class Home extends React.Component {
             className = "btn-close"
             data - bs - dismiss = "modal"
             aria - label = "Close" >
-            < /button> <
-            /div> <
+            <
+            /button> < /
+            div > <
             div className = "modal-body" >
             <
             form >
@@ -91,8 +92,8 @@ class Home extends React.Component {
             id = "age"
             aria - describedby = "emailHelp"
             onChange = { this.addUserAge }
-            /> <
-            /form> <
+            /> < /
+            form > <
             /div> <
             div className = "modal-footer" >
             <
@@ -100,10 +101,10 @@ class Home extends React.Component {
             className = "btn btn-primary"
             onClick = { this.submitData } >
             Save <
-            /button> <
-            /div> <
-            /div> <
-            /div> <
+            /button> < /
+            div > <
+            /div> < /
+            div > <
             /div>
 
             { /* table */ }
@@ -116,8 +117,8 @@ class Home extends React.Component {
             tr >
             <
             th scope = "col" > Name < /th> <
-            th scope = "col" > Age < /th> <
-            /tr> <
+            th scope = "col" > Age < /th> < /
+            tr > <
             /thead> <
             tbody > {
                 this.state.items.map((item) => {
@@ -125,13 +126,13 @@ class Home extends React.Component {
                         tr >
                         <
                         td > { item.name } < /td> <
-                        td > { item.age } < /td> <
-                        /tr>
+                        td > { item.age } < /td> < /
+                        tr >
                     );
                 })
             } <
-            /tbody> <
-            /table> <
+            /tbody> < /
+            table > <
             /div>
         );
     }
